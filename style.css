@@ -32,9 +32,11 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   margin: 56px auto 0px;
 }
+
 /*PROFILE*/
 #profile {
   text-align: center;
@@ -73,7 +75,9 @@ body * {
   top: 50%; /*Adiciona 50% para cima*/
   left: 0; /*Liga tema escuro*/
   z-index: 1; /*Coloca a bolinha acima do span*/
-  transform: translateY(-50%); /*tira 50% colocando para baixo, fazendo bolinha ficar centralizada em cima do span*/
+  transform: translateY(
+    -50%
+  ); /*tira 50% colocando para baixo, fazendo bolinha ficar centralizada em cima do span*/
 }
 
 /*Ligar tema branco*/
