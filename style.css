@@ -29,7 +29,6 @@ body {
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  height: 100vh;
 }
 
 #container {
@@ -79,11 +78,16 @@ body * {
   transform: translateY(
     -50%
   ); /*tira 50% colocando para baixo, fazendo bolinha ficar centralizada em cima do span*/
+  animation: slide-back 0.2s;
 }
 
 /*Ligar tema branco*/
 .light #switch button {
   animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -178,5 +182,14 @@ footer {
   }
   to {
     left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
