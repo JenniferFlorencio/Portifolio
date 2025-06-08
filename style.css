@@ -29,6 +29,7 @@ body {
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
+  height: 100vh;
 }
 
 #container {
@@ -82,8 +83,7 @@ body * {
 
 /*Ligar tema branco*/
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -156,4 +156,27 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/*Media queries*/
+/*Nessa parte conforme tamanho muda e alterado imagem de fundo*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(/assets/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(/assets/assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animação do botao*/
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
 }
